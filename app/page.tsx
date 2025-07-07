@@ -38,6 +38,66 @@ export default function HomePage() {
           author: 'John Lennon',
           tags: ['life', 'wisdom'],
         },
+        {
+          id: '4',
+          content: 'The future belongs to those who believe in the beauty of their dreams.',
+          author: 'Eleanor Roosevelt',
+          tags: ['dreams', 'future', 'motivation'],
+        },
+        {
+          id: '5',
+          content: 'It is during our darkest moments that we must focus to see the light.',
+          author: 'Aristotle',
+          tags: ['hope', 'perseverance', 'wisdom'],
+        },
+        {
+          id: '6',
+          content: 'The only impossible journey is the one you never begin.',
+          author: 'Tony Robbins',
+          tags: ['journey', 'motivation', 'success'],
+        },
+        {
+          id: '7',
+          content: 'In the middle of difficulty lies opportunity.',
+          author: 'Albert Einstein',
+          tags: ['opportunity', 'challenges', 'wisdom'],
+        },
+        {
+          id: '8',
+          content: 'Success is not final, failure is not fatal: it is the courage to continue that counts.',
+          author: 'Winston Churchill',
+          tags: ['success', 'failure', 'courage'],
+        },
+        {
+          id: '9',
+          content: 'The only person you are destined to become is the person you decide to be.',
+          author: 'Ralph Waldo Emerson',
+          tags: ['self-improvement', 'destiny', 'motivation'],
+        },
+        {
+          id: '10',
+          content: 'Your time is limited, don\'t waste it living someone else\'s life.',
+          author: 'Steve Jobs',
+          tags: ['time', 'authenticity', 'life'],
+        },
+        {
+          id: '11',
+          content: 'The way to get started is to quit talking and begin doing.',
+          author: 'Walt Disney',
+          tags: ['action', 'motivation', 'success'],
+        },
+        {
+          id: '12',
+          content: 'Don\'t be afraid to give up the good to go for the great.',
+          author: 'John D. Rockefeller',
+          tags: ['ambition', 'excellence', 'risk'],
+        },
+        {
+          id: '13',
+          content: 'The best time to plant a tree was 20 years ago. The second best time is now.',
+          author: 'Chinese Proverb',
+          tags: ['time', 'action', 'wisdom'],
+        },
       ];
 
       const randomQuote =
