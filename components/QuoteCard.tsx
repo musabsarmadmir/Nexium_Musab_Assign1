@@ -39,7 +39,7 @@ export function QuoteCard({
     >
       {/* Quote Content */}
       <blockquote className="mb-4 text-lg leading-relaxed text-gray-800 dark:text-gray-200 md:text-xl">
-        "{quote.content}"
+        &ldquo;{quote.content}&rdquo;
       </blockquote>
 
       {/* Author */}

@@ -85,7 +85,7 @@ export default function HomePage() {
           ) : quote ? (
             <div className="text-center">
               <blockquote className="mb-6 text-2xl font-medium leading-relaxed text-gray-800 dark:text-gray-200 md:text-3xl">
-                "{quote.content}"
+                &ldquo;{quote.content}&rdquo;
               </blockquote>
               <cite className="text-lg text-gray-600 dark:text-gray-400">
                 — {quote.author}
@@ -139,7 +139,7 @@ export default function HomePage() {
               {favorites.map((fav) => (
                 <div key={fav.id} className="quote-card">
                   <blockquote className="mb-3 text-lg">
-                    "{fav.content}"
+                    &ldquo;{fav.content}&rdquo;
                   </blockquote>
                   <cite className="text-gray-600 dark:text-gray-400">
                     — {fav.author}
