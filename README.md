@@ -15,7 +15,7 @@ A modern quote generator application built with Next.js, TypeScript, and Tailwin
 
 - **Frontend**: Next.js 14, React 18, TypeScript
 - **Styling**: Tailwind CSS
-- **Database**: JSON
+- **Data**: Mock JSON data
 - **Deployment**: Vercel
 - **Package Manager**: pnpm
 
@@ -66,8 +66,6 @@ A modern quote generator application built with Next.js, TypeScript, and Tailwin
 │   └── LoadingSpinner.tsx  # Loading animation
 ├── lib/                    # Utility functions
 │   └── utils.ts            # Helper functions and utilities
-├── prisma/                 # Database schema and migrations
-│   └── schema.prisma       # Database schema definition
 ├── types/                  # TypeScript type definitions
 │   └── index.ts            # Global type definitions
 └── README.md
@@ -88,9 +86,6 @@ A modern quote generator application built with Next.js, TypeScript, and Tailwin
 - `pnpm lint` - Run ESLint
 - `pnpm lint:fix` - Fix ESLint issues automatically
 - `pnpm format` - Format code with Prettier
-- `pnpm db:generate` - Generate Prisma client
-- `pnpm db:push` - Push database schema
-- `pnpm db:studio` - Open Prisma Studio
 
 ## 📊 Quote Collection
 
