@@ -1,35 +1,30 @@
 # 📖 Nexium Quote Generator
 
-A modern, full-stack quote generator application built with Next.js, TypeScript, and Tailwind CSS. Generate, save, and share inspirational quotes with a beautiful, responsive interface.
+A modern quote generator application built with Next.js, TypeScript, and Tailwind CSS. Generate inspirational quotes and save your favorites with a beautiful, responsive interface.
 
 ## ✨ Features
 
-- 🎯 Generate random quotes from multiple sources
-- 💾 Save favorite quotes to your personal collection
+- 🎯 Generate random quotes from multiple curated selections
+- ❤️ Save favorite quotes to your personal collection
+- 🏷️ View quotes organized by tags (motivation, wisdom, success, etc.)
 - 🎨 Beautiful, responsive UI with Tailwind CSS
-- 🔐 User authentication with NextAuth.js
 - 📱 Mobile-first design
-- 🌙 Dark/Light mode toggle
-- 📊 Quote analytics and statistics
-- 🔗 Share quotes on social media
-- 🚀 Fast performance with Next.js
+- ⚡ Fast performance with Next.js
 
 ## 🛠️ Tech Stack
 
 - **Frontend**: Next.js 14, React 18, TypeScript
 - **Styling**: Tailwind CSS
-- **Database**: PostgreSQL (Supabase) + MongoDB Atlas
-- **ORM**: Prisma
-- **Authentication**: NextAuth.js
+- **Database**: JSON
 - **Deployment**: Vercel
-- **Automation**: n8n
+- **Package Manager**: pnpm
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
 - Node.js ≥ 20
-- pnpm
+- pnpm (recommended) or npm
 - Git
 
 ### Installation
@@ -37,7 +32,7 @@ A modern, full-stack quote generator application built with Next.js, TypeScript,
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/Nexium_Musab_Assign1.git
+   git clone https://github.com/musabsarmadmir/Nexium_Musab_Assign1.git
    cd Nexium_Musab_Assign1
    ```
 
@@ -47,53 +42,43 @@ A modern, full-stack quote generator application built with Next.js, TypeScript,
    pnpm install
    ```
 
-3. **Set up environment variables**
-
-   ```bash
-   cp .env.example .env
-   ```
-
-   Fill in your environment variables in the `.env` file.
-
-4. **Set up the database**
-
-   ```bash
-   pnpm db:generate
-   pnpm db:push
-   ```
-
-5. **Run the development server**
+3. **Run the development server**
 
    ```bash
    pnpm dev
    ```
 
-6. **Open your browser**
+4. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
 ## 📁 Project Structure
 
 ```
-├── app/                  # Next.js App Router
-│   ├── api/             # API routes
-│   ├── components/      # React components
-│   ├── globals.css      # Global styles
-│   └── layout.tsx       # Root layout
-├── components/          # Reusable components
-├── lib/                 # Utility functions
-├── prisma/              # Database schema
-├── public/              # Static assets
-├── types/               # TypeScript types
+├── app/                     # Next.js App Router
+│   ├── api/                # API routes
+│   │   ├── quotes/         # Quote generation endpoints
+│   │   └── categories/     # Category management
+│   ├── globals.css         # Global styles with Tailwind
+│   ├── layout.tsx          # Root layout component
+│   └── page.tsx            # Main quote generator page
+├── components/             # Reusable React components
+│   ├── QuoteCard.tsx       # Quote display component
+│   └── LoadingSpinner.tsx  # Loading animation
+├── lib/                    # Utility functions
+│   └── utils.ts            # Helper functions and utilities
+├── prisma/                 # Database schema and migrations
+│   └── schema.prisma       # Database schema definition
+├── types/                  # TypeScript type definitions
+│   └── index.ts            # Global type definitions
 └── README.md
 ```
 
 ## 🎯 Usage
 
-1. **Generate Quotes**: Click the "Generate Quote" button to get random inspirational quotes
-2. **Save Favorites**: Save quotes you love to your personal collection
-3. **Browse Categories**: Explore quotes by different categories and authors
-4. **Share**: Share your favorite quotes on social media platforms
-5. **Dark Mode**: Toggle between light and dark themes
+1. **Generate Quotes**: Click the "Generate New Quote" button to discover inspirational quotes
+2. **Save Favorites**: Click the heart button to add quotes to your personal collection
+3. **Browse Tags**: View categorized tags for each quote (motivation, wisdom, success, etc.)
+4. **View Favorites**: Scroll down to see your saved quotes collection
 
 ## 🔧 Available Scripts
 
@@ -101,28 +86,40 @@ A modern, full-stack quote generator application built with Next.js, TypeScript,
 - `pnpm build` - Build for production
 - `pnpm start` - Start production server
 - `pnpm lint` - Run ESLint
+- `pnpm lint:fix` - Fix ESLint issues automatically
 - `pnpm format` - Format code with Prettier
 - `pnpm db:generate` - Generate Prisma client
 - `pnpm db:push` - Push database schema
 - `pnpm db:studio` - Open Prisma Studio
 
-## 📊 API Endpoints
+## 📊 Quote Collection
 
-- `GET /api/quotes` - Get random quotes
-- `GET /api/quotes/[id]` - Get specific quote
-- `POST /api/quotes` - Create new quote
-- `GET /api/quotes/category/[category]` - Get quotes by category
-- `GET /api/user/favorites` - Get user's favorite quotes
-- `POST /api/user/favorites` - Add quote to favorites
+The application features 13 inspirational quotes from:
+
+- **Steve Jobs** (2 quotes) - Innovation and authenticity
+- **Eleanor Roosevelt** - Dreams and future
+- **Aristotle** - Hope and perseverance  
+- **Tony Robbins** - Action and success
+- **Albert Einstein** - Opportunity in challenges
+- **Winston Churchill** - Courage and persistence
+- **Ralph Waldo Emerson** - Self-determination
+- **Walt Disney** - Taking action
+- **John D. Rockefeller** - Excellence and ambition
+- **John Lennon** - Life philosophy
+- **Chinese Proverb** - Timing and wisdom
 
 ## 🌐 Deployment
 
-This project is configured for easy deployment on Vercel:
+This project is deployed on Vercel:
 
-1. Push your code to GitHub
+🔗 **Live Demo**: [https://nexium-musab-assign1-41hrs5okc-trackc.vercel.app](https://nexium-musab-assign1-41hrs5okc-trackc.vercel.app)
+
+### Deploy Your Own
+
+1. Fork this repository
 2. Connect your repository to Vercel
-3. Add environment variables in Vercel dashboard
-4. Deploy!
+3. Deploy with default settings
+4. Your app will be live!
 
 ## 🤝 Contributing
 
@@ -140,15 +137,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Musab Sarmad**
 
-- GitHub: [@MusabSarmad](https://github.com/musabsarmadmir)
+- GitHub: [@musabsarmadmir](https://github.com/musabsarmadmir)
 
 ## 🙏 Acknowledgments
 
-- [Quotable API](https://quotable.io/) for quote data
-- [Tailwind CSS](https://tailwindcss.com/) for styling
-- [Next.js](https://nextjs.org/) for the amazing framework
-- [Vercel](https://vercel.com/) for hosting
-
----
-
-⭐ Star this repository if you find it helpful!
+- Inspired by the wisdom of great thinkers and leaders
+- Built with [Next.js](https://nextjs.org/) for the amazing framework
+- Styled with [Tailwind CSS](https://tailwindcss.com/) for beautiful UI
+- Deployed on [Vercel](https://vercel.com/) for hosting
